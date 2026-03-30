@@ -1,5 +1,5 @@
-import NavLinks from "./NavLinks";
-import { Menu, ShoppingCart, X } from "lucide-react";
+import NavLinks from "./Navlinks";
+import { Menu, ShoppingCart } from "lucide-react";
 
 const navItems = [
   {
