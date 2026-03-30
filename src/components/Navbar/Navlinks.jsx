@@ -1,8 +1,8 @@
 import React from "react";
 
-const Navlinks = ({route}) => {
+const NavLinks = ({route}) => {
   return (
-    <div className="flex gap-6 list-none text-[16px] md:text-[18px] font-semibold">
+    <div className="list-none">
       {
         <li>
           <a href={route.path}>{route.name}</a>
@@ -12,4 +12,4 @@ const Navlinks = ({route}) => {
   );
 };
 
-export default Navlinks;
+export default NavLinks;

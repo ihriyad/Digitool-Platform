@@ -3,14 +3,13 @@ import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
-   <div>
-    {/* header here  */}
-    <header>
-      <nav className="p-5 bg-gray-100 sticky">
-        <Navbar></Navbar>
-      </nav>
-    </header>
-   </div>
+    <div>
+      <header>
+        <nav className="sticky">
+          <Navbar></Navbar>
+        </nav>
+      </header>
+    </div>
   );
 }
 

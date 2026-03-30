@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import Navlinks from "./Navlinks";
+import NavLinks from "./NavLinks";
 import { Menu, ShoppingCart, X } from "lucide-react";
 
 const navItems = [
@@ -30,40 +29,34 @@ const navItems = [
   },
 ];
 const Links = navItems.map((route) => (
-  <Navlinks route={route} key={route.id}></Navlinks>
+  <NavLinks route={route} key={route.id}></NavLinks>
 ));
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
   return (
-    <div className="flex justify-between items-center">
-      <div className="flex gap-4 items-center">
-        <div
-          className="cursor-pointer md:hidden"
-          onClick={() => setOpen(!open)}
-        >
-          <div
-            className="cursor-pointer md:hidden relative"
-            onClick={() => setOpen(!open)}
-          >
-            {open ? <X /> : <Menu />}
-
-            {open && (
-              <ul className="absolute top-10 left-0 bg-white shadow-lg p-4 space-y-3 w-40">
-                {Links}
-              </ul>
-            )}
+    <div className="navbar bg-base-100 shadow-sm">
+      <div className="navbar-start">
+        <div className="dropdown md:hidden">
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+            <Menu></Menu>
           </div>
+          <ul
+            tabIndex="-1"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+          >
+            {Links}
+          </ul>
         </div>
-        <h2
-          className={`${open ? "hidden" : "block"} text-[#4f39f6] text-2xl md:text-3xl font-bold`}
-        >
-          DigiTools
-        </h2>
+        <h2 className="text-[#4f39f6] text-2xl md:text-3xl font-bold">DigiTools</h2>
       </div>
-      <div className="hidden md:block md:flex gap-5">{Links}</div>
-      <div className="flex items-center gap-4">
-        <ShoppingCart></ShoppingCart>
-        <h2 className="font-bold">Login</h2>
+      <div className="navbar-center hidden md:flex gap-4">{Links}</div>
+      <div className="navbar-end space-x-2">
+        <button className="btn btn-ghost btn-circle">
+          <div className="indicator">
+            <ShoppingCart />
+            <span className="badge badge-xs badge-primary indicator-item"></span>
+          </div>
+        </button>
+        <button className="btn btn-ghost btn-circle">Login</button>
         <button className="btn btn-primary">Get Started</button>
       </div>
     </div>
