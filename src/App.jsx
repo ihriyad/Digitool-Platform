@@ -1,11 +1,16 @@
 import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
-    <>
-      <h3 className="text-red-600">Hello this is Digitools Platform</h3>
-      <button className="btn btn-outline">Click Me</button>
-    </>
+   <div>
+    {/* header here  */}
+    <header>
+      <nav className="p-5 bg-gray-100 sticky">
+        <Navbar></Navbar>
+      </nav>
+    </header>
+   </div>
   );
 }
 
