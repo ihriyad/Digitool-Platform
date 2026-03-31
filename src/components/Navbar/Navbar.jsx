@@ -46,7 +46,7 @@ const Navbar = () => {
             {Links}
           </ul>
         </div>
-        <h2 className="text-[#4f39f6] text-2xl md:text-3xl font-bold">DigiTools</h2>
+        <h2 className="text-[#4f39f6] text-2xl md:text-3xl font-bold hidden md:flex">DigiTools</h2>
       </div>
       <div className="navbar-center hidden md:flex gap-4">{Links}</div>
       <div className="navbar-end space-x-2">
