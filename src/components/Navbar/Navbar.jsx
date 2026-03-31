@@ -46,7 +46,9 @@ const Navbar = () => {
             {Links}
           </ul>
         </div>
-        <h2 className="text-[#4f39f6] text-2xl md:text-3xl font-bold hidden md:flex">DigiTools</h2>
+        <h1 className="text-[20px] md:text-3xl font-bold bg-linear-to-r from-purple-500 to-indigo-500 bg-clip-text text-transparent">
+          DigiTools
+        </h1>
       </div>
       <div className="navbar-center hidden md:flex gap-4">{Links}</div>
       <div className="navbar-end space-x-2">
@@ -57,7 +59,7 @@ const Navbar = () => {
           </div>
         </button>
         <button className="btn btn-ghost btn-circle">Login</button>
-        <button className="btn btn-primary">Get Started</button>
+        <button className="btn btn-primary bg-linear-to-r from-purple-500 to-indigo-500">Get Started</button>
       </div>
     </div>
   );

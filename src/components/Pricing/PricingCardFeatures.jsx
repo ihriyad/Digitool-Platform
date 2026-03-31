@@ -1,11 +1,11 @@
 import { Check } from "lucide-react";
 import React from "react";
 
-const PricingCardFeatures = ({ data }) => {
+const PricingCardFeatures = ({ data , highlight }) => {
   return (
     <div>
       <p className="flex">
-        <Check></Check>
+        <Check className={`${highlight == true? 'text-white':'text-green-500'}`}></Check>
         {data}
       </p>
     </div>

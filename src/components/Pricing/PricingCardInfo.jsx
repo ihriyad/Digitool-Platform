@@ -17,9 +17,9 @@ const PricingCardInfo = ({ data }) => {
     <div
       className={`
         ${highlight ==true?
-            'bg-[#4F39F6] text-white': 'bg-gray-50'
+            'bg-linear-to-r from-indigo-600 to-purple-600 text-white': 'bg-gray-50'
         }
-        rounded-md
+        rounded-xl
         p-6
         relative
         flex flex-col
@@ -27,7 +27,7 @@ const PricingCardInfo = ({ data }) => {
     >
       <div
         className={`${highlight == true ? "block" : "hidden"}
-          badge badge-warning absolute -top-3 left-23 md:left-24 lg:left-20`}
+          badge badge-warning text-black absolute -top-3  md:left-24 lg:left-20`}
       >
         {badge}
       </div>
@@ -41,11 +41,11 @@ const PricingCardInfo = ({ data }) => {
       </p>
       <div className="flex-1">
         {
-            features.map(data=><PricingCardFeatures data={data}></PricingCardFeatures>)
+            features.map(data=><PricingCardFeatures highlight={highlight} data={data}></PricingCardFeatures>)
         }
       </div>
       <div>
-        <button className={`${highlight==true?"bg-white text-[#4F39F6]":'bg-[#4F39F6] text-white'} btn btn-primary w-full rounded-3xl`}>{buttonText}</button>
+        <button className={`${highlight==true?"bg-white text-[#4F39F6]":'bg-linear-to-r from-purple-500 to-indigo-500 text-white'} btn btn-primary w-full rounded-3xl`}>{buttonText}</button>
       </div>
      
     </div>

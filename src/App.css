@@ -13,6 +13,10 @@ body {
   max-width: 1240px;
   margin: 0 auto;
 }
+body a:hover {
+  text-decoration: underline;
+}
+
 footer h2{
   font-size: 20px;
   font-weight: 500;
@@ -27,5 +31,5 @@ footer a {
 }
 footer a:hover{
   color:cyan;
-  text-decoration: underline;
+  
 }
