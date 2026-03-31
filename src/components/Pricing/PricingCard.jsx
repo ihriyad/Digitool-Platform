@@ -11,7 +11,7 @@ const PricingCard = ({ pricingData }) => {
     lg:grid-cols-3"
     >
       {pricingData.map((data) => (
-        <PricingCardInfo data={data}></PricingCardInfo>
+        <PricingCardInfo key={data.id} data={data}></PricingCardInfo>
       ))}
     </div>
   );

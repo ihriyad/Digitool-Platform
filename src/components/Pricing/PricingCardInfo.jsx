@@ -41,7 +41,7 @@ const PricingCardInfo = ({ data }) => {
       </p>
       <div className="flex-1">
         {
-            features.map(data=><PricingCardFeatures highlight={highlight} data={data}></PricingCardFeatures>)
+            features.map(data=><PricingCardFeatures highlight={highlight} key={data.id} data={data}></PricingCardFeatures>)
         }
       </div>
       <div>

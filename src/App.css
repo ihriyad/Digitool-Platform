@@ -16,20 +16,30 @@ body {
 body a:hover {
   text-decoration: underline;
 }
+.status-section h2 {
+  font-size: 40px;
+  font-weight: 700;
+  @media screen and (max-width: 600px) {
+    font-size: 30px;
+    font-weight: 600;
+  }
+}
+.status-section p{
+  opacity: 0.8;
+}
 
-footer h2{
+footer h2 {
   font-size: 20px;
   font-weight: 500;
-@media screen and (max-width: 600px){
-  font-size: 18px;
-  font-weight:500;
-}
+  @media screen and (max-width: 600px) {
+    font-size: 18px;
+    font-weight: 500;
+  }
 }
 footer a {
   opacity: 0.8;
   font-size: small;
 }
-footer a:hover{
-  color:cyan;
-  
+footer a:hover {
+  color: cyan;
 }
