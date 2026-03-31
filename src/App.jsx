@@ -1,6 +1,7 @@
 import "./App.css";
 import Footer from "./components/Footer/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
+import Pricing from "./components/Pricing/Pricing";
 
 function App() {
   return (
@@ -10,7 +11,9 @@ function App() {
           <Navbar></Navbar>
         </nav>
       </header>
-      <main></main>
+      <main>
+        <Pricing></Pricing>
+      </main>
       <footer>
         <Footer></Footer>
       </footer>

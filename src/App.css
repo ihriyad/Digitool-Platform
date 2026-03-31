@@ -27,4 +27,5 @@ footer a {
 }
 footer a:hover{
   color:cyan;
+  text-decoration: underline;
 }
