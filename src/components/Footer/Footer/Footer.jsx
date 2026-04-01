@@ -14,7 +14,7 @@ const Footer = () => {
         grid-cols-1
         md:grid-cols-2 
         gap-8 border-2 
-        border-gray-500 
+        border-gray-800 
         rounded-2xl p-4"
       >
         <div className="footer-start w-9/12 text-center">

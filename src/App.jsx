@@ -6,6 +6,8 @@ import Navbar from "./components/Navbar/Navbar";
 import Pricing from "./components/Pricing/Pricing";
 import Status from "./components/Status/Status";
 import Workflow from "./components/Workflow/Workflow";
+import ProductCards from "./components/Products/Products";
+
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
       <main>
         <Hero></Hero>
         <Status></Status>
+        <ProductCards></ProductCards>
         <Cards></Cards>
         <Pricing></Pricing>
         <Workflow></Workflow>

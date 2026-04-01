@@ -27,6 +27,11 @@ const navItems = [
     name: "FAQ",
     path: "/",
   },
+  {
+    id: 6,
+    name: "Login",
+    path: "/",
+  },
 ];
 const Links = navItems.map((route) => (
   <NavLinks route={route} key={route.id}></NavLinks>
@@ -58,7 +63,7 @@ const Navbar = () => {
             <span className="badge badge-xs badge-primary indicator-item"></span>
           </div>
         </button>
-        <button className="btn btn-ghost btn-circle">Login</button>
+        <button className="btn hidden md:block btn-ghost btn-circle">Login</button>
         <button className="btn btn-primary bg-linear-to-r from-purple-500 to-indigo-500">Get Started</button>
       </div>
     </div>

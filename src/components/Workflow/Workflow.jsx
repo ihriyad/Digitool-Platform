@@ -3,10 +3,10 @@ import React from "react";
 const Workflow = () => {
   return (
     <div className="text-center bg-linear-to-r from-purple-500 to-indigo-500 p-10  text-[18px] space-y-4">
-      <h2 className="text-white text-3xl font-bold">
+      <h2 className="text-white text-xl md:text-3xl font-bold">
         Ready to Transform Your Workflow?
       </h2>
-      <p className="text-white/70">
+      <p className="text-white/70 text-[12px] md:text-[16px]">
         Join thousands of professionals who are already using Digitools to work
         smarter.Start your free trial today.
       </p>
@@ -18,7 +18,7 @@ const Workflow = () => {
           View Pricing
         </button>
       </div>
-      <p>14-day free trial • No credit card required • Cancel anytime</p>
+      <p className="text-[12px] md:text-[16px]">14-day free trial • No credit card required • Cancel anytime</p>
     </div>
   );
 };
