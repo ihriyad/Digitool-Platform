@@ -1,25 +1,40 @@
-import React from 'react';
+import React from "react";
+import CardFeatures from "./CardFeatures";
+import CardImg from "./CardImg";
 
-const ProductsCards = ({product, handleAddToCart}) => {
-    return (
-         <div key={product.id} className="card bg-base-100 shadow-xl p-4">
-              <div className="flex justify-between">
-                <h2 className="text-lg font-bold">{product.name}</h2>
-                <span className="badge badge-secondary">{product.badge}</span>
-              </div>
+const ProductsCards = ({ product, handleAddToCart }) => {
+  const { id, badge,image, name, description, price, type, features } = product;
 
-              <p className="mt-2 text-gray-500">
-                ${product.price} / {product.type}
-              </p>
+  return (
+    <div key={id} className="card space-y-3 bg-base-100 relative shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 p-4">
+      <span className={`${badge =="Popular"?
+        "bg-purple-100 text-purple-600":
+        badge == "New"?
+        "bg-green-100 text-green-600":
+         "bg-red-100 text-red-600"
+      } badge absolute left-70 top-2 p-3 font-medium`}>{badge}</span>
+      <div className="">
+        <CardImg img={image} name={name}></CardImg>
+      </div>
+      <div className="card-start flex-1">
+        <h2 className="text-lg font-bold">{name}</h2>
+        <p>{description}</p>
+      </div>
 
-              <button
-                onClick={() => handleAddToCart(product)}
-                className="btn mt-4 bg-linear-to-r from-purple-500 to-pink-500 text-white"
-              >
-                Buy Now
-              </button>
-            </div>
-    );
+      <p className="mt-2 text-xl md:text-2xl font-bold">
+        ${price} / {type}
+      </p>
+      <div className="flex-1">
+        <CardFeatures features={features}></CardFeatures>
+      </div>
+      <button
+        onClick={() => handleAddToCart(product)}
+        className="btn mt-4 bg-linear-to-r from-purple-500 to-indigo-500 rounded-4xl text-white p-6"
+      >
+        Buy Now
+      </button>
+    </div>
+  );
 };
 
 export default ProductsCards;

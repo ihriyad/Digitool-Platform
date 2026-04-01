@@ -35,7 +35,7 @@ const Cart = ({cart, view, handleRemove, total}) => {
 
               <button
                 onClick={() => toast.success("Proceeding to checkout")}
-                className="btn w-full mt-4 bg-linear-to-r from-purple-500 to-pink-500 text-white"
+                className="btn w-full mt-4 bg-green-400 text-black font-bold"
               >
                 Proceed To Checkout
               </button>

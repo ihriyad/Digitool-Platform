@@ -1,84 +1,20 @@
-import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Toggle from "./Toggle";
 import ProductsCards from "./ProductsCards";
 import Cart from "./Cart";
 
-const productsData = [
-  {
-    id: 1,
-    name: "AI Writing Pro",
-    price: 29,
-    type: "monthly",
-    badge: "Best Seller",
-  },
-  {
-    id: 2,
-    name: "Design Templates Pack",
-    price: 49,
-    type: "one-time",
-    badge: "Popular",
-  },
-  {
-    id: 3,
-    name: "Premium Stock Assets",
-    price: 19,
-    type: "monthly",
-    badge: "New",
-  },
-  {
-    id: 4,
-    name: "Automation Toolkit",
-    price: 79,
-    type: "monthly",
-    badge: "Popular",
-  },
-  {
-    id: 5,
-    name: "Resume Builder Pro",
-    price: 15,
-    type: "one-time",
-    badge: "New",
-  },
-  {
-    id: 6,
-    name: "Social Media Content Kit",
-    price: 39,
-    type: "monthly",
-    badge: "Best Seller",
-  },
-  {
-    id: 7,
-    name: "SEO Booster",
-    price: 25,
-    type: "monthly",
-    badge: "Popular",
-  },
-  {
-    id: 8,
-    name: "UI Kit Pro",
-    price: 45,
-    type: "one-time",
-    badge: "New",
-  },
-  {
-    id: 9,
-    name: "Video Editing Pack",
-    price: 59,
-    type: "one-time",
-    badge: "Best Seller",
-  },
-  {
-    id: 10,
-    name: "Marketing Toolkit",
-    price: 35,
-    type: "monthly",
-    badge: "Popular",
-  },
-];
+import { useEffect, useState } from "react";
 
 const ProductCards = () => {
+  const [productsData, setProductData] = useState([]);
+
+  useEffect(() => {
+    fetch("/productData.json")
+      .then((res) => res.json())
+      .then((data) => setProductData(data));
+  }, []);
+
   const [view, setView] = useState("products");
   const [cart, setCart] = useState([]);
 
@@ -94,8 +30,15 @@ const ProductCards = () => {
   const total = cart.reduce((sum, item) => sum + item.price, 0);
 
   return (
-    <div className="p-4">
+    <div className="p-4 space-y-3">
       <ToastContainer />
+      <div className="text-center">
+        <h1 className="text-2xl md:text-3xl font-bold mt-5 mb-2">Premium Digital Tools</h1>
+        <p>
+          Choose from our curated collection of premium digital products
+          designed to boost your productivity and creativity.
+        </p>
+      </div>
 
       {/* Toggle */}
       <div className="flex justify-center mb-6">
@@ -122,6 +65,12 @@ const ProductCards = () => {
         handleRemove={handleRemove}
         cart={cart}
       ></Cart>
+       <div className="text-center mt-16">
+              <h2 className="text-2xl md:text-3xl font-bold">
+                Get Started in 3 Steps
+              </h2>
+              <p>Start using premium digital tools in minutes, not hours.</p>
+            </div>
     </div>
   );
 };

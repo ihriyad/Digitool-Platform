@@ -1,0 +1,94 @@
+[
+  {
+    "id": 1,
+
+    "image": "https://i.ibb.co/3y8bWrkt/camera-8775444-1.png",
+    "name": "AI Writing Pro",
+    "price": 29,
+    "type": "monthly",
+    "badge": "Best Seller",
+    "description": "Advanced AI-powered writing tool for blogs, ads, and content creation.",
+    "features": [
+      "AI blog generator",
+      "Grammar correction",
+      "SEO optimization",
+      "Multi-language support"
+    ]
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co.com/7dStvCbn/design-tool-2062942-1.png",
+    "name": "Design Templates Pack",
+    "price": 49,
+    "type": "one-time",
+    "badge": "Popular",
+    "description": "A collection of modern and responsive design templates.",
+    "features": [
+      "100+ templates",
+      "Fully customizable",
+      "Figma & PSD files",
+      "Responsive layouts"
+    ]
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co.com/k2fzqZ1f/operation-11826522-1.png",
+    "name": "Premium Stock Assets",
+    "price": 19,
+    "type": "monthly",
+    "badge": "New",
+    "description": "Access high-quality stock images, videos, and graphics.",
+    "features": [
+      "Unlimited downloads",
+      "HD & 4K content",
+      "Commercial license",
+      "Weekly updates"
+    ]
+  },
+  {
+    "id": 4,
+
+    "image": "https://i.ibb.co.com/sp9k3Dqy/portfolio-1153845-1.png",
+    "name": "Automation Toolkit",
+    "price": 79,
+    "type": "monthly",
+    "badge": "Popular",
+    "description": "Automate repetitive tasks and boost productivity.",
+    "features": [
+      "Workflow automation",
+      "Task scheduling",
+      "API integrations",
+      "Real-time monitoring"
+    ]
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co.com/yFYg2qqD/social-media-2065203-1.png",
+    "name": "Resume Builder Pro",
+    "price": 15,
+    "type": "one-time",
+    "badge": "New",
+    "description": "Create professional resumes with ease.",
+    "features": [
+      "ATS-friendly templates",
+      "Drag & drop builder",
+      "Export to PDF",
+      "Cover letter support"
+    ]
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co.com/5gJsSDMX/writing-2327400-1.png",
+    "name": "Social Media Content Kit",
+    "price": 39,
+    "type": "monthly",
+    "badge": "Best Seller",
+    "description": "Ready-to-use content for social media growth.",
+    "features": [
+      "Post templates",
+      "Caption ideas",
+      "Hashtag suggestions",
+      "Platform-specific designs"
+    ]
+  }
+]

@@ -23,7 +23,8 @@ const PricingCardInfo = ({ data }) => {
         p-6
         relative
         flex flex-col
-        space-y-5`}
+        space-y-5
+        shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2`}
     >
       <div
         className={`${highlight == true ? "block" : "hidden"}
