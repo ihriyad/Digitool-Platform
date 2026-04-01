@@ -33,7 +33,9 @@ const ProductCards = () => {
     <div className="p-4 space-y-3">
       <ToastContainer />
       <div className="text-center">
-        <h1 className="text-2xl md:text-3xl font-bold mt-5 mb-2">Premium Digital Tools</h1>
+        <h1 className="text-2xl md:text-3xl font-bold mt-5 mb-2">
+          Premium Digital Tools
+        </h1>
         <p>
           Choose from our curated collection of premium digital products
           designed to boost your productivity and creativity.
@@ -50,6 +52,7 @@ const ProductCards = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {productsData.map((product) => (
             <ProductsCards
+              key={product.id}
               product={product}
               handleAddToCart={handleAddToCart}
             ></ProductsCards>
@@ -65,12 +68,12 @@ const ProductCards = () => {
         handleRemove={handleRemove}
         cart={cart}
       ></Cart>
-       <div className="text-center mt-16">
-              <h2 className="text-2xl md:text-3xl font-bold">
-                Get Started in 3 Steps
-              </h2>
-              <p>Start using premium digital tools in minutes, not hours.</p>
-            </div>
+      <div className="text-center mt-16">
+        <h2 className="text-2xl md:text-3xl font-bold">
+          Get Started in 3 Steps
+        </h2>
+        <p>Start using premium digital tools in minutes, not hours.</p>
+      </div>
     </div>
   );
 };

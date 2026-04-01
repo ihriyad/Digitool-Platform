@@ -7,9 +7,9 @@ const CardImg = ({ image, name }) => {
         src={image}
         alt={name}
         className="hover:scale-105 transition duration-300"
+       
       />
     </div>
   );
 };
-
 export default CardImg;

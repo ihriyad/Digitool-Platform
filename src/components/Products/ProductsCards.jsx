@@ -3,18 +3,28 @@ import CardFeatures from "./CardFeatures";
 import CardImg from "./CardImg";
 
 const ProductsCards = ({ product, handleAddToCart }) => {
-  const { id, badge,image, name, description, price, type, features } = product;
+  const { id, badge, image, name, description, price, type, features } =
+    product;
 
   return (
-    <div key={id} className="card space-y-3 bg-base-100 relative shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 p-4">
-      <span className={`${badge =="Popular"?
-        "bg-purple-100 text-purple-600":
-        badge == "New"?
-        "bg-green-100 text-green-600":
-         "bg-red-100 text-red-600"
-      } badge absolute left-70 top-2 p-3 font-medium`}>{badge}</span>
-      <div className="">
+    <div
+      key={id}
+      className="card space-y-3 bg-base-100  shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 p-4"
+    >
+      <div className="flex items-center justify-between">
         <CardImg img={image} name={name}></CardImg>
+
+        <span
+          className={`${
+            badge == "Popular"
+              ? "bg-purple-100 text-purple-600"
+              : badge == "New"
+                ? "bg-green-100 text-green-600"
+                : "bg-red-100 text-red-600"
+          } badge  p-3 font-medium`}
+        >
+          {badge}
+        </span>
       </div>
       <div className="card-start flex-1">
         <h2 className="text-lg font-bold">{name}</h2>
